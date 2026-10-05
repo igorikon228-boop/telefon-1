@@ -14,3 +14,25 @@ document.querySelectorAll("[data-photo]").forEach(photo=>photo.addEventListener(
 document.querySelector("[data-viewer-close]").addEventListener("click",()=>{viewer.classList.remove("open");viewerImage.src="";});
 
 document.querySelectorAll('[data-open]').forEach(btn=>btn.addEventListener('click',()=>{const target=btn.dataset.open,view=document.querySelector('[data-view="'+target+'"]'),chat=view&&view.querySelector('.chat');if(chat)requestAnimationFrame(()=>{chat.scrollTop=chat.scrollHeight;});}));
+
+document.querySelectorAll(".chat-view").forEach(view=>{
+  const chat=view.querySelector(".chat"),input=view.querySelector(".chat-input"),send=view.querySelector(".chat-send");
+  if(!chat||!input||!send)return;
+  const submit=()=>{
+    const value=input.value.trim();
+    if(!value)return;
+    const old=chat.querySelector(".send-error:last-child");
+    if(old)old.remove();
+    const error=document.createElement("div");
+    error.className="send-error";
+    error.textContent="Ошибка. Нет связи";
+    const bubble=document.createElement("div");
+    bubble.className="bubble outgoing";
+    bubble.textContent=value;
+    chat.append(error,bubble);
+    input.value="";
+    requestAnimationFrame(()=>{chat.scrollTop=chat.scrollHeight;});
+  };
+  send.addEventListener("click",submit);
+  input.addEventListener("keydown",e=>{if(e.key==="Enter"){e.preventDefault();submit();}});
+});

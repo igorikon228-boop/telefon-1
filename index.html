@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#101116" />
   <title>Телефон — НРИ</title>
-  <link rel="stylesheet" href="styles.css?v=7" />
+  <link rel="stylesheet" href="styles.css?v=8" />
 </head>
 <body>
   <main class="stage">
     <section class="phone" aria-label="Игровой мобильный телефон">
-      <div class="speaker"><button class="app" data-open="map"><div class="app-icon map-app-icon">⌖</div><span>Карта</span></button></div>
+      <div class="speaker"></div>
       <div class="screen">
         <header class="status-bar">
           <span id="clock">09:41</span>
@@ -23,7 +23,7 @@
             <button class="app" data-open="messages"><span class="app-icon messages-icon" aria-hidden="true">●●●</span><span>Сообщения</span></button>
             <button class="app" data-open="notes"><span class="app-icon notes-icon" aria-hidden="true">≡</span><span>Заметки</span></button>
             <button class="app" data-gallery-lock><span class="app-icon gallery-icon" aria-hidden="true">▧</span><span>Галерея</span></button>
-          </nav>
+          <button class="app" data-open="map"><span class="app-icon map-app-icon" aria-hidden="true">⌖</span><span>Карта</span></button></nav>
           <div class="home-hint">Выберите приложение</div>
         </section>
 
@@ -78,7 +78,7 @@
 <section class="view app-view chat-view" data-view="katya-chat"><div class="app-header"><button class="back" data-back="messages">‹</button><h1>Катя</h1></div><div class="chat"><div class="day">05.08.2056</div><div class="bubble incoming">Мы вечером кино включаем на проекторе. Придёшь?</div><div class="bubble outgoing">Если свет будет. И дверь на первый этаж закройте.</div><div class="bubble incoming">Из-за горячих?</div><div class="bubble outgoing">Ага. На соседней улице одного ночью покусали. Утром уже не встал.</div><div class="bubble incoming">Поняла. Тогда наверху соберёмся.</div><div class="day">22.08.2056</div><div class="bubble outgoing">Ты грозу слышала ночью?</div><div class="bubble incoming">Это не гроза. Очередь где-то у стройки была.</div><div class="bubble outgoing">Наши не стреляли.</div><div class="bubble incoming">Значит, опять чужие ходят.</div><div class="bubble outgoing">Без нужды вечером наружу не выходи.</div></div></section>
 <section class="view app-view chat-view" data-view="roman-chat"><div class="app-header"><button class="back" data-back="messages">‹</button><h1>Роман</h1></div><div class="chat"><div class="day">07.07.2056</div><div class="bubble incoming">На крыше сегодня закат отличный. Полгорода видно.</div><div class="bubble outgoing">И горячих у гаражей тоже видно?</div><div class="bubble incoming">Трое там бродят. Пока далеко.</div><div class="bubble outgoing">Тогда на крышу можно. Только дверь за собой закрой.</div><div class="day">07.08.2056</div><div class="bubble outgoing">Что за стрельба ночью была?</div><div class="bubble incoming">Парни у магазина горячего снимали. Говорят, он на человека бросился.</div><div class="bubble outgoing">И?</div><div class="bubble incoming">Не успели. Мужика покусал, тот через несколько часов умер.</div><div class="bubble outgoing">Ясно. Сегодня удвоим дежурство.</div></div></section>
 <section class="view app-view chat-view" data-view="irka-chat"><div class="app-header"><button class="back" data-back="messages">‹</button><h1>Ирка</h1></div><div class="chat"><div class="day">19.07.2056</div><div class="bubble incoming">У вас на посту правда автомат появился?</div><div class="bubble outgoing">Калаш. Старый, но работает.</div><div class="bubble incoming">Ваня сказал, ты его себе забрал.</div><div class="bubble outgoing">Не себе. Он общий. На посту нужнее.</div><div class="bubble incoming">Главное, чтобы Прохор не решил из него банки пострелять.</div><div class="bubble outgoing">За такое я его самого заставлю банки собирать.</div><div class="day">30.07.2056</div><div class="bubble incoming">Подсолнух возле гаражей всё ещё стоит.</div><div class="bubble outgoing">Не ходи туда одна. Вчера за гаражами горячего видели.</div><div class="bubble incoming">Поняла. Подсолнух подождёт.</div></div></section>
-<section class="view app-view map-view" data-view="map"><div class="app-header"><button class="back" data-back="home">‹</button><h1>Карта</h1></div><div class="map-canvas"><img src="https://upload.wikimedia.org/wikipedia/commons/3/30/Novosibirsk_geolocation_map.png" alt="Карта Новосибирска"><div class="map-caption"><strong>Новосибирск</strong><span>Карта города</span></div><div class="map-credit">© OpenStreetMap contributors · CC BY-SA 2.0</div></div></section><section class="view app-view" data-view="notes">
+<section class="view app-view map-view" data-view="map"><div class="app-header"><button class="back" data-back="home">‹</button><h1>Карта</h1><span></span></div><div class="map-canvas" data-map-canvas><div class="map-transform" data-map-transform><img draggable="false" src="https://upload.wikimedia.org/wikipedia/commons/3/30/Novosibirsk_geolocation_map.png" alt="Карта Новосибирска"></div><div class="map-controls"><button data-map-zoom-in aria-label="Увеличить">+</button><button data-map-zoom-out aria-label="Уменьшить">−</button><button data-map-reset aria-label="Сбросить">⌖</button></div><div class="map-caption"><strong>Новосибирск</strong><span>Перетаскивайте карту · масштабируйте пальцами</span></div><div class="map-credit">© OpenStreetMap contributors · CC BY-SA 2.0</div></div></section><section class="view app-view" data-view="notes">
           <header class="app-header"><button class="back" data-back aria-label="Назад">‹</button><h1>Заметки</h1><span></span></header>
           <div class="notes-list">
             <div class="note-content">
@@ -109,6 +109,6 @@
       </div>
     </section>
   </main>
-  <script src="app.js?v=5"></script>
+  <script src="app.js?v=8"></script>
 </body>
 </html>

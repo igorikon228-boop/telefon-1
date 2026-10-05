@@ -42,12 +42,20 @@
         <section class="view app-view chat-view" data-view="boss-chat">
           <header class="app-header"><button class="back" data-back="messages" aria-label="Назад">‹</button><h1>Босс</h1><span></span></header>
           <div class="chat">
+            <div class="day">10.10.2056</div>
+            <div class="bubble incoming">Сивый, как мост? Народ идёт?</div>
+            <div class="bubble outgoing">Тихо. За утро трое со стороны центра. Проверили, пропустили. Один раненый, оружия не было.</div>
+            <div class="bubble incoming">Раненых осматривайте внимательнее. Нам заразу на эту сторону не притащить.</div>
+            <div class="day">11.10.2056</div>
+            <div class="bubble outgoing">По мосту за день прошли 11 человек. Две семьи и трое одиночек. У одного был обрез — оставил на посту, прошёл без вопросов.</div>
+            <div class="bubble incoming">Хорошо. Обрез запиши в журнал. Ночью никого без моего разрешения.</div>
             <div class="day">12.10.2056</div>
             <div class="bubble incoming">Сивый, отчёт по Октябрьскому мосту. Что за смену?</div>
             <div class="bubble outgoing">Мост под контролем. За смену пропустили 7 выживших: семья из трёх человек, двое одиночек и пара с тележкой. Оружие сдали на проходе, подозрительных не было.</div>
             <div class="bubble incoming">Принял. Держите контроль. Если пойдёт большая группа — сначала свяжись со мной.</div>
             <div class="day">13.10.2056</div>
             <div class="bubble incoming">Сивый, надо проверить рога, мы интересный сигнал перехватили.</div>
+            <div class="bubble outgoing">Возьму парней и проверим.</div>
           </div>
         </section>
 
@@ -62,7 +70,21 @@
 
         <section class="view app-view" data-view="notes">
           <header class="app-header"><button class="back" data-back aria-label="Назад">‹</button><h1>Заметки</h1><span></span></header>
-          <div class="empty-state"><div class="empty-icon notes-icon">≡</div><h2>Заметок пока нет</h2><p>Здесь появятся записи и подсказки.</p></div>
+          <div class="notes-list">
+            <article class="note-card">
+              <div class="note-date">13.10.2056</div>
+              <h2>НСК — наброски</h2>
+              <p>Город стоит над холодной рекой,<br>
+              Мосты режут Обь, как старые шрамы.<br>
+              В окнах давно не осталось огней,<br>
+              Только костры да пустые рекламы.</p>
+              <p>Ветер гуляет по Красному вновь,<br>
+              Пылью заносит знакомые лица.<br>
+              Если здесь кто-то ещё меня ждёт —<br>
+              Значит, отсюда нельзя торопиться.</p>
+              <p class="note-draft">…дописать про метро, рога и левый берег</p>
+            </article>
+          </div>
         </section>
 
         <section class="view app-view" data-view="gallery">

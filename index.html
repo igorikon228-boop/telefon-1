@@ -28,19 +28,35 @@
         </section>
 
         <section class="view app-view" data-view="messages">
-          <header class="app-header"><button class="back" data-back aria-label="Назад">‹</button><h1>Сообщения</h1><span></span></header>
+          <header class="app-header"><button class="back" data-back="home" aria-label="Назад">‹</button><h1>Сообщения</h1><span></span></header>
           <div class="conversations">
-            <article class="conversation">
-              <div class="avatar">Б</div>
-              <div class="conversation-body"><div class="conversation-top"><strong>Босс</strong><time>13.10</time></div><p>Сивый, надо проверить рога, мы интересный сигнал перехватили.</p></div>
-            </article>
-            <article class="conversation">
-              <div class="avatar">Б</div>
-              <div class="conversation-body">
-                <div class="conversation-top"><strong>Брат</strong><time>13.10</time></div>
-                <div class="chat-preview"><p><span>Брат:</span> Сивый, давай завязывать с этим делом, свалим из НСК.</p><p class="own"><span>Сивый:</span> Думаю, еще одно дело и валим.</p></div>
-              </div>
-            </article>
+            <button class="conversation" data-open="boss-chat">
+              <div class="avatar">Б</div><div class="conversation-body"><div class="conversation-top"><strong>Босс</strong><time>13.10</time></div><p>Сивый, надо проверить рога, мы интересный сигнал перехватили.</p></div><span class="chevron">›</span>
+            </button>
+            <button class="conversation" data-open="brother-chat">
+              <div class="avatar">Б</div><div class="conversation-body"><div class="conversation-top"><strong>Брат</strong><time>13.10</time></div><p>Думаю, еще одно дело и валим.</p></div><span class="chevron">›</span>
+            </button>
+          </div>
+        </section>
+
+        <section class="view app-view chat-view" data-view="boss-chat">
+          <header class="app-header"><button class="back" data-back="messages" aria-label="Назад">‹</button><h1>Босс</h1><span></span></header>
+          <div class="chat">
+            <div class="day">12.10.2056</div>
+            <div class="bubble incoming">Сивый, отчёт по Октябрьскому мосту. Что за смену?</div>
+            <div class="bubble outgoing">Мост под контролем. За смену пропустили 7 выживших: семья из трёх человек, двое одиночек и пара с тележкой. Оружие сдали на проходе, подозрительных не было.</div>
+            <div class="bubble incoming">Принял. Держите контроль. Если пойдёт большая группа — сначала свяжись со мной.</div>
+            <div class="day">13.10.2056</div>
+            <div class="bubble incoming">Сивый, надо проверить рога, мы интересный сигнал перехватили.</div>
+          </div>
+        </section>
+
+        <section class="view app-view chat-view" data-view="brother-chat">
+          <header class="app-header"><button class="back" data-back="messages" aria-label="Назад">‹</button><h1>Брат</h1><span></span></header>
+          <div class="chat">
+            <div class="day">13.10.2056</div>
+            <div class="bubble incoming">Сивый, давай завязывать с этим делом, свалим из НСК.</div>
+            <div class="bubble outgoing">Думаю, еще одно дело и валим.</div>
           </div>
         </section>
 

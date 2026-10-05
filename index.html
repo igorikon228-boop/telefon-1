@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#101116" />
+  <title>Телефон — НРИ</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="stage">
+    <section class="phone" aria-label="Игровой мобильный телефон">
+      <div class="speaker"></div>
+
+      <div class="screen">
+        <header class="status-bar">
+          <span id="clock">09:41</span>
+          <div class="status-icons" aria-hidden="true">
+            <span>●●●</span><span>⌁</span><span>▰</span>
+          </div>
+        </header>
+
+        <section class="view home-view active" data-view="home" aria-label="Главный экран">
+          <div class="home-title">
+            <p>Телефон</p>
+            <span>НРИ</span>
+          </div>
+
+          <nav class="apps" aria-label="Приложения">
+            <button class="app" data-open="messages">
+              <span class="app-icon messages-icon" aria-hidden="true">●●●</span>
+              <span>Сообщения</span>
+            </button>
+            <button class="app" data-open="notes">
+              <span class="app-icon notes-icon" aria-hidden="true">≡</span>
+              <span>Заметки</span>
+            </button>
+            <button class="app" data-open="gallery">
+              <span class="app-icon gallery-icon" aria-hidden="true">▧</span>
+              <span>Галерея</span>
+            </button>
+          </nav>
+
+          <div class="home-hint">Выберите приложение</div>
+        </section>
+
+        <section class="view app-view" data-view="messages">
+          <header class="app-header">
+            <button class="back" data-back aria-label="Назад">‹</button>
+            <h1>Сообщения</h1>
+            <span class="header-spacer"></span>
+          </header>
+          <div class="empty-state">
+            <div class="empty-icon messages-icon">●●●</div>
+            <h2>Сообщений пока нет</h2>
+            <p>Здесь появятся переписки персонажа.</p>
+          </div>
+        </section>
+
+        <section class="view app-view" data-view="notes">
+          <header class="app-header">
+            <button class="back" data-back aria-label="Назад">‹</button>
+            <h1>Заметки</h1>
+            <span class="header-spacer"></span>
+          </header>
+          <div class="empty-state">
+            <div class="empty-icon notes-icon">≡</div>
+            <h2>Заметок пока нет</h2>
+            <p>Здесь появятся записи и подсказки.</p>
+          </div>
+        </section>
+
+        <section class="view app-view" data-view="gallery">
+          <header class="app-header">
+            <button class="back" data-back aria-label="Назад">‹</button>
+            <h1>Галерея</h1>
+            <span class="header-spacer"></span>
+          </header>
+          <div class="empty-state">
+            <div class="empty-icon gallery-icon">▧</div>
+            <h2>Галерея пуста</h2>
+            <p>Здесь появятся фотографии и изображения.</p>
+          </div>
+        </section>
+
+        <button class="home-indicator" data-home aria-label="На главный экран"></button>
+      </div>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

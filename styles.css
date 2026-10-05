@@ -44,3 +44,7 @@ html,body{margin:0;width:100%;height:100%;min-height:100%;overflow:hidden;backgr
 @media(max-width:600px){.map-canvas>img{width:100%;min-height:0;height:auto}.map-caption{top:10px}.map-credit{bottom:calc(10px + env(safe-area-inset-bottom))}}
 
 .apps{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr));align-items:start;gap:18px 10px;width:100%;padding:0 12px}.apps .app{width:100%;min-width:0}.map-canvas{touch-action:none;cursor:grab;overflow:hidden!important}.map-canvas.dragging{cursor:grabbing}.map-transform{position:absolute;inset:0;transform-origin:center center;will-change:transform}.map-transform img{width:100%;height:100%;object-fit:cover;user-select:none;-webkit-user-drag:none;pointer-events:none}.map-controls{position:absolute;right:12px;top:72px;z-index:5;display:flex;flex-direction:column;gap:6px}.map-controls button{width:40px;height:40px;border:0;border-radius:12px;background:rgba(20,23,27,.88);color:#fff;font-size:23px;box-shadow:0 3px 12px #0005}.map-controls button:last-child{font-size:19px}@media(max-width:600px){.apps{grid-template-columns:repeat(4,minmax(0,1fr));gap:18px 6px;padding:0 8px}.map-controls{top:66px;right:10px}.map-controls button{width:42px;height:42px}}
+
+/* Map app removed */
+.apps{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+@media(max-width:600px){.apps{grid-template-columns:repeat(3,minmax(0,1fr))!important}}

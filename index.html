@@ -11,78 +11,48 @@
   <main class="stage">
     <section class="phone" aria-label="Игровой мобильный телефон">
       <div class="speaker"></div>
-
       <div class="screen">
         <header class="status-bar">
           <span id="clock">09:41</span>
-          <div class="status-icons" aria-hidden="true">
-            <span>●●●</span><span>⌁</span><span>▰</span>
-          </div>
+          <div class="status-icons" aria-hidden="true"><span>●●●</span><span>⌁</span><span>▰</span></div>
         </header>
 
         <section class="view home-view active" data-view="home" aria-label="Главный экран">
-          <div class="home-title">
-            <p>Телефон</p>
-            <span>НРИ</span>
-          </div>
-
+          <div class="home-date">13.10.2056</div>
           <nav class="apps" aria-label="Приложения">
-            <button class="app" data-open="messages">
-              <span class="app-icon messages-icon" aria-hidden="true">●●●</span>
-              <span>Сообщения</span>
-            </button>
-            <button class="app" data-open="notes">
-              <span class="app-icon notes-icon" aria-hidden="true">≡</span>
-              <span>Заметки</span>
-            </button>
-            <button class="app" data-open="gallery">
-              <span class="app-icon gallery-icon" aria-hidden="true">▧</span>
-              <span>Галерея</span>
-            </button>
+            <button class="app" data-open="messages"><span class="app-icon messages-icon" aria-hidden="true">●●●</span><span>Сообщения</span></button>
+            <button class="app" data-open="notes"><span class="app-icon notes-icon" aria-hidden="true">≡</span><span>Заметки</span></button>
+            <button class="app" data-open="gallery"><span class="app-icon gallery-icon" aria-hidden="true">▧</span><span>Галерея</span></button>
           </nav>
-
           <div class="home-hint">Выберите приложение</div>
         </section>
 
         <section class="view app-view" data-view="messages">
-          <header class="app-header">
-            <button class="back" data-back aria-label="Назад">‹</button>
-            <h1>Сообщения</h1>
-            <span class="header-spacer"></span>
-          </header>
-          <div class="empty-state">
-            <div class="empty-icon messages-icon">●●●</div>
-            <h2>Сообщений пока нет</h2>
-            <p>Здесь появятся переписки персонажа.</p>
+          <header class="app-header"><button class="back" data-back aria-label="Назад">‹</button><h1>Сообщения</h1><span></span></header>
+          <div class="conversations">
+            <article class="conversation">
+              <div class="avatar">Б</div>
+              <div class="conversation-body"><div class="conversation-top"><strong>Босс</strong><time>13.10</time></div><p>Сивый, надо проверить рога, мы интересный сигнал перехватили.</p></div>
+            </article>
+            <article class="conversation">
+              <div class="avatar">Б</div>
+              <div class="conversation-body">
+                <div class="conversation-top"><strong>Брат</strong><time>13.10</time></div>
+                <div class="chat-preview"><p><span>Брат:</span> Сивый, давай завязывать с этим делом, свалим из НСК.</p><p class="own"><span>Сивый:</span> Думаю, еще одно дело и валим.</p></div>
+              </div>
+            </article>
           </div>
         </section>
 
         <section class="view app-view" data-view="notes">
-          <header class="app-header">
-            <button class="back" data-back aria-label="Назад">‹</button>
-            <h1>Заметки</h1>
-            <span class="header-spacer"></span>
-          </header>
-          <div class="empty-state">
-            <div class="empty-icon notes-icon">≡</div>
-            <h2>Заметок пока нет</h2>
-            <p>Здесь появятся записи и подсказки.</p>
-          </div>
+          <header class="app-header"><button class="back" data-back aria-label="Назад">‹</button><h1>Заметки</h1><span></span></header>
+          <div class="empty-state"><div class="empty-icon notes-icon">≡</div><h2>Заметок пока нет</h2><p>Здесь появятся записи и подсказки.</p></div>
         </section>
 
         <section class="view app-view" data-view="gallery">
-          <header class="app-header">
-            <button class="back" data-back aria-label="Назад">‹</button>
-            <h1>Галерея</h1>
-            <span class="header-spacer"></span>
-          </header>
-          <div class="empty-state">
-            <div class="empty-icon gallery-icon">▧</div>
-            <h2>Галерея пуста</h2>
-            <p>Здесь появятся фотографии и изображения.</p>
-          </div>
+          <header class="app-header"><button class="back" data-back aria-label="Назад">‹</button><h1>Галерея</h1><span></span></header>
+          <div class="empty-state"><div class="empty-icon gallery-icon">▧</div><h2>Галерея пуста</h2><p>Здесь появятся фотографии и изображения.</p></div>
         </section>
-
         <button class="home-indicator" data-home aria-label="На главный экран"></button>
       </div>
     </section>

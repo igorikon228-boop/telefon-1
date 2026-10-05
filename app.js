@@ -9,3 +9,6 @@ document.querySelectorAll("[data-back]").forEach(button=>button.addEventListener
 document.querySelector("[data-home]").addEventListener("click",()=>showView("home"));
 function updateClock(){const now=new Date();document.querySelector("#clock").textContent=now.toLocaleTimeString("ru-RU",{hour:"2-digit",minute:"2-digit"});}
 updateClock();setInterval(updateClock,30000);
+const viewer=document.querySelector("[data-photo-viewer]"),viewerImage=document.querySelector("[data-viewer-image]"),viewerDate=document.querySelector("[data-viewer-date]");
+document.querySelectorAll("[data-photo]").forEach(photo=>photo.addEventListener("click",()=>{viewerImage.src=photo.dataset.photo;viewerDate.textContent=photo.dataset.date;viewer.classList.add("open");}));
+document.querySelector("[data-viewer-close]").addEventListener("click",()=>{viewer.classList.remove("open");viewerImage.src="";});

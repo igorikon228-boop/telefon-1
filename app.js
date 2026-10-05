@@ -12,3 +12,5 @@ updateClock();setInterval(updateClock,30000);
 const viewer=document.querySelector("[data-photo-viewer]"),viewerImage=document.querySelector("[data-viewer-image]"),viewerDate=document.querySelector("[data-viewer-date]");
 document.querySelectorAll("[data-photo]").forEach(photo=>photo.addEventListener("click",()=>{viewerImage.src=photo.dataset.photo;viewerDate.textContent=photo.dataset.date;viewer.classList.add("open");}));
 document.querySelector("[data-viewer-close]").addEventListener("click",()=>{viewer.classList.remove("open");viewerImage.src="";});
+
+document.querySelectorAll('[data-open]').forEach(btn=>btn.addEventListener('click',()=>{const target=btn.dataset.open,view=document.querySelector('[data-view="'+target+'"]'),chat=view&&view.querySelector('.chat');if(chat)requestAnimationFrame(()=>{chat.scrollTop=chat.scrollHeight;});}));

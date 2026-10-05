@@ -22,7 +22,7 @@
           <nav class="apps" aria-label="Приложения">
             <button class="app" data-open="messages"><span class="app-icon messages-icon" aria-hidden="true">●●●</span><span>Сообщения</span></button>
             <button class="app" data-open="notes"><span class="app-icon notes-icon" aria-hidden="true">≡</span><span>Заметки</span></button>
-            <button class="app" data-open="gallery"><span class="app-icon gallery-icon" aria-hidden="true">▧</span><span>Галерея</span></button>
+            <button class="app" data-gallery-lock><span class="app-icon gallery-icon" aria-hidden="true">▧</span><span>Галерея</span></button>
           </nav>
           <div class="home-hint">Выберите приложение</div>
         </section>
@@ -33,7 +33,7 @@
             <button class="conversation" data-open="boss-chat">
               <div class="avatar">Б</div><div class="conversation-body"><div class="conversation-top"><strong>Босс</strong><time>13.10</time></div><p>Сивый, надо проверить рога, мы интересный сигнал перехватили.</p></div><span class="chevron">›</span>
             </button>
-            <button class="conversation" data-open="prohor-chat"><div class="avatar">П</div><div class="conversation-body"><div class="conversation-top"><strong>Прохор</strong><time>12:41</time></div><p>Чай ещё остался?</p></div><span class="chevron">›</span></button><button class="conversation" data-open="vanya-chat"><div class="avatar">В</div><div class="conversation-body"><div class="conversation-top"><strong>Ваня</strong><time>09:18</time></div><p>Ладно, вечером занесу.</p></div><span class="chevron">›</span></button><button class="conversation" data-open="brother-chat">
+            <button class="conversation" data-open="prohor-chat"><div class="avatar">П</div><div class="conversation-body"><div class="conversation-top"><strong>Прохор</strong><time>13.10</time></div><p>Чай ещё остался?</p></div><span class="chevron">›</span></button><button class="conversation" data-open="vanya-chat"><div class="avatar">В</div><div class="conversation-body"><div class="conversation-top"><strong>Ваня</strong><time>13.10</time></div><p>Ладно, вечером занесу.</p></div><span class="chevron">›</span></button><button class="conversation" data-open="brother-chat">
               <div class="avatar">Б</div><div class="conversation-body"><div class="conversation-top"><strong>Брат</strong><time>13.10</time></div><p>Думаю, еще одно дело и валим.</p></div><span class="chevron">›</span>
             </button>
           </div>
@@ -87,7 +87,7 @@
           </div>
         </section>
 
-        <section class="view app-view" data-view="gallery">
+        <section class="view app-view" data-view="gallery"><div class="gallery-lock" data-gallery-gate><div class="lock-symbol">▧</div><h2>Галерея заблокирована</h2><p>Введите код доступа</p><input data-gallery-pin type="password" inputmode="numeric" maxlength="4" placeholder="••••" aria-label="Код доступа"><button data-gallery-unlock>Открыть</button><div class="lock-error" data-gallery-error></div></div>
           <header class="app-header"><button class="back" data-back aria-label="Назад">‹</button><h1>Галерея</h1><span></span></header>
           <div class="empty-state"><div class="empty-icon gallery-icon">▧</div><h2>Галерея пуста</h2><p>Здесь появятся фотографии и изображения.</p></div>
         </section>
